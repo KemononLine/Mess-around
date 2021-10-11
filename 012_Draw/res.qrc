@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Screenshots/屏幕截图(179).png</file>
+        <file>Screenshots/屏幕截图(180).png</file>
+        <file>Screenshots/屏幕截图(181).png</file>
+        <file>Screenshots/屏幕截图(182).png</file>
+    </qresource>
+</RCC>

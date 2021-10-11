@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Cyberpunk 2077/photomode_13122020_122249.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,1538 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第9节：matplotlib绘图分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10多图布局.html" />
+    
+    
+    <link rel="prev" href="08雷达图.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter0/00.html">
+            
+                <a href="../chapter0/00.html">
+            
+                    
+                    第一章：数据分析前奏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter0/01什么是数据分析.html">
+            
+                <a href="../chapter0/01什么是数据分析.html">
+            
+                    
+                    第1节：什么是数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter0/02环境搭建.html">
+            
+                <a href="../chapter0/02环境搭建.html">
+            
+                    
+                    第2节：环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter0/03jupyternotebook使用.html">
+            
+                <a href="../chapter0/03jupyternotebook使用.html">
+            
+                    
+                    第3节：jupyternotebook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter0/04作业.html">
+            
+                <a href="../chapter0/04作业.html">
+            
+                    
+                    第4节：作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter1/00.html">
+            
+                <a href="../chapter1/00.html">
+            
+                    
+                    第二章：Numpy库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter1/01numpy库介绍.html">
+            
+                <a href="../chapter1/01numpy库介绍.html">
+            
+                    
+                    第1节：numpy库介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter1/02numpy数组基本.html">
+            
+                <a href="../chapter1/02numpy数组基本.html">
+            
+                    
+                    第2节：numpy数组基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter1/03numpy数组操作.html">
+            
+                <a href="../chapter1/03numpy数组操作.html">
+            
+                    
+                    第3节：numpy数组操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter1/03numpy索引和切片.html">
+            
+                <a href="../chapter1/03numpy索引和切片.html">
+            
+                    
+                    第4节：numpy索引和切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter1/04Numpy索引和切片作业.html">
+            
+                <a href="../chapter1/04Numpy索引和切片作业.html">
+            
+                    
+                    第5节：Numpy索引和切片作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter1/05numpy数组操作.html">
+            
+                <a href="../chapter1/05numpy数组操作.html">
+            
+                    
+                    第6节：numpy数组操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter1/06深拷贝和浅拷贝.html">
+            
+                <a href="../chapter1/06深拷贝和浅拷贝.html">
+            
+                    
+                    第7节：深拷贝和浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../chapter1/07文件操作.html">
+            
+                <a href="../chapter1/07文件操作.html">
+            
+                    
+                    第8节：文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../chapter1/08数组操作和文件操作作业.html">
+            
+                <a href="../chapter1/08数组操作和文件操作作业.html">
+            
+                    
+                    第9节：数组操作和文件操作作业.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../chapter1/09NAN和INF值处理.html">
+            
+                <a href="../chapter1/09NAN和INF值处理.html">
+            
+                    
+                    第10节：NAN和INF值处理.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../chapter1/10random模块.html">
+            
+                <a href="../chapter1/10random模块.html">
+            
+                    
+                    第11节：random模块.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../chapter1/11axis理解.html">
+            
+                <a href="../chapter1/11axis理解.html">
+            
+                    
+                    第12节：axis理解.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../chapter1/12通用函数.html">
+            
+                <a href="../chapter1/12通用函数.html">
+            
+                    
+                    第13节：通用函数.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../chapter1/13numpy练习题.html">
+            
+                <a href="../chapter1/13numpy练习题.html">
+            
+                    
+                    第14节：numpy练习题.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter2/00.html">
+            
+                <a href="../chapter2/00.html">
+            
+                    
+                    第三章：Pandas库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter2/01pandas介绍.html">
+            
+                <a href="../chapter2/01pandas介绍.html">
+            
+                    
+                    第1节：pandas介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter2/02pandas索引操作.html">
+            
+                <a href="../chapter2/02pandas索引操作.html">
+            
+                    
+                    第2节：pandas索引操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter2/03pandas对齐运算.html">
+            
+                <a href="../chapter2/03pandas对齐运算.html">
+            
+                    
+                    第3节：pandas对齐运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter2/04pandas函数应用.html">
+            
+                <a href="../chapter2/04pandas函数应用.html">
+            
+                    
+                    第4节：pandas函数应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter2/05pandas层级索引.html">
+            
+                <a href="../chapter2/05pandas层级索引.html">
+            
+                    
+                    第5节：pandas层级索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter2/06pandas统计计算和描述.html">
+            
+                <a href="../chapter2/06pandas统计计算和描述.html">
+            
+                    
+                    第6节：pandas统计计算和描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter2/07文件操作.html">
+            
+                <a href="../chapter2/07文件操作.html">
+            
+                    
+                    第7节：文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter2/08数据清洗.html">
+            
+                <a href="../chapter2/08数据清洗.html">
+            
+                    
+                    第8节：数据清洗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter2/09聚合和分组.html">
+            
+                <a href="../chapter2/09聚合和分组.html">
+            
+                    
+                    第9节：聚合和分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../chapter2/10时间序列.html">
+            
+                <a href="../chapter2/10时间序列.html">
+            
+                    
+                    第10节：时间序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    第四章：Matploblib库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="01常用图.html">
+            
+                <a href="01常用图.html">
+            
+                    
+                    第1节：常用图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="02基本使用.html">
+            
+                <a href="02基本使用.html">
+            
+                    
+                    第2节：基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="03条形图.html">
+            
+                <a href="03条形图.html">
+            
+                    
+                    第3节：条形图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="04直方图.html">
+            
+                <a href="04直方图.html">
+            
+                    
+                    第4节：直方图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="05散点图.html">
+            
+                <a href="05散点图.html">
+            
+                    
+                    第5节：散点图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="06饼图.html">
+            
+                <a href="06饼图.html">
+            
+                    
+                    第6节：饼图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="07箱线图.html">
+            
+                <a href="07箱线图.html">
+            
+                    
+                    第7节：箱线图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="08雷达图.html">
+            
+                <a href="08雷达图.html">
+            
+                    
+                    第8节：雷达图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.9" data-path="09matplotlib绘图分析.html">
+            
+                <a href="09matplotlib绘图分析.html">
+            
+                    
+                    第9节：matplotlib绘图分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="10多图布局.html">
+            
+                <a href="10多图布局.html">
+            
+                    
+                    第10节：多图布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="11matplotlib配置.html">
+            
+                <a href="11matplotlib配置.html">
+            
+                    
+                    第11节：matplotlib配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="12matplotlib作业.html">
+            
+                <a href="12matplotlib作业.html">
+            
+                    
+                    第12节：matplotlib作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/00.html">
+            
+                <a href="../chapter5/00.html">
+            
+                    
+                    第五章：Seaborn库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/01关系绘图.html">
+            
+                <a href="../chapter5/01关系绘图.html">
+            
+                    
+                    第1节：关系绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/02分类绘图.html">
+            
+                <a href="../chapter5/02分类绘图.html">
+            
+                    
+                    第2节：分类绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/03分布绘图.html">
+            
+                <a href="../chapter5/03分布绘图.html">
+            
+                    
+                    第3节：分布绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/04线性关系绘图.html">
+            
+                <a href="../chapter5/04线性关系绘图.html">
+            
+                    
+                    第4节：线性关系绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/05FacetGrid结构图.html">
+            
+                <a href="../chapter5/05FacetGrid结构图.html">
+            
+                    
+                    第5节：FacetGrid结构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/06样式设置.html">
+            
+                <a href="../chapter5/06样式设置.html">
+            
+                    
+                    第6节：样式设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/07调色盘设置.html">
+            
+                <a href="../chapter5/07调色盘设置.html">
+            
+                    
+                    第7节：调色盘设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../chapter5/08seaborn作业.html">
+            
+                <a href="../chapter5/08seaborn作业.html">
+            
+                    
+                    第8节：seaborn作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/00.html">
+            
+                <a href="../chapter6/00.html">
+            
+                    
+                    第六章：pyecharts库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/01快速开始.html">
+            
+                <a href="../chapter6/01快速开始.html">
+            
+                    
+                    第1节：快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/02全局配置项.html">
+            
+                <a href="../chapter6/02全局配置项.html">
+            
+                    
+                    第2节：全局配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/03条形图.html">
+            
+                <a href="../chapter6/03条形图.html">
+            
+                    
+                    第3节：条形图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/04箱线图.html">
+            
+                <a href="../chapter6/04箱线图.html">
+            
+                    
+                    第4节：箱线图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/05散点图.html">
+            
+                <a href="../chapter6/05散点图.html">
+            
+                    
+                    第5节：散点图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/06地理图.html">
+            
+                <a href="../chapter6/06地理图.html">
+            
+                    
+                    第6节：地理图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../chapter6/07关系图.html">
+            
+                <a href="../chapter6/07关系图.html">
+            
+                    
+                    第7节：关系图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter3/00.html">
+            
+                <a href="../chapter3/00.html">
+            
+                    
+                    第七章：统计分析强化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter3/01常用专业数学术语.html">
+            
+                <a href="../chapter3/01常用专业数学术语.html">
+            
+                    
+                    第1节：常用专业数学术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter3/02平均数.html">
+            
+                <a href="../chapter3/02平均数.html">
+            
+                    
+                    第2节：平均数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter3/03方差和标准差.html">
+            
+                <a href="../chapter3/03方差和标准差.html">
+            
+                    
+                    第3节：方差和标准差
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter3/04正态分布.html">
+            
+                <a href="../chapter3/04正态分布.html">
+            
+                    
+                    第4节：正态分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../chapter3/05对比分析.html">
+            
+                <a href="../chapter3/05对比分析.html">
+            
+                    
+                    第5节：对比分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../chapter3/06分布分析.html">
+            
+                <a href="../chapter3/06分布分析.html">
+            
+                    
+                    第6节：分布分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../chapter3/07交叉分析.html">
+            
+                <a href="../chapter3/07交叉分析.html">
+            
+                    
+                    第7节：交叉分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../chapter3/08统计分析.html">
+            
+                <a href="../chapter3/08统计分析.html">
+            
+                    
+                    第8节：统计分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../chapter3/09帕累托分析.html">
+            
+                <a href="../chapter3/09帕累托分析.html">
+            
+                    
+                    第9节：帕累托分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../chapter3/10矩阵关联分析.html">
+            
+                <a href="../chapter3/10矩阵关联分析.html">
+            
+                    
+                    第10节：矩阵关联分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../chapter3/11综合性分析.html">
+            
+                <a href="../chapter3/11综合性分析.html">
+            
+                    
+                    第11节：综合性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter7/00.html">
+            
+                <a href="../chapter7/00.html">
+            
+                    
+                    第八章：数据分析实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter6/01App数据分析实战.md">
+            
+                <span>
+            
+                    
+                    第1节：App数据分析实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter6/02心脏病患者数据分析.md">
+            
+                <span>
+            
+                    
+                    第2节：心脏病患者数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter6/03StackoverFlow数据分析.md">
+            
+                <span>
+            
+                    
+                    第3节：StackoverFlow数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter6/04二手房数据分析.md">
+            
+                <span>
+            
+                    
+                    第4节：二手房数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../chapter6/05吃鸡数据分析.md">
+            
+                <span>
+            
+                    
+                    第5节：吃鸡数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../chapter6/06黑色星期五数据分析.md">
+            
+                <span>
+            
+                    
+                    第6节：黑色星期五数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter8/00.html">
+            
+                <a href="../chapter8/00.html">
+            
+                    
+                    第九章：补充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter7/01用Excel做数据分析.md">
+            
+                <span>
+            
+                    
+                    第1节：用Excel做数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter7/02echarts和pyecharts库.md">
+            
+                <span>
+            
+                    
+                    第2节：echarts和pyecharts库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter7/03bokeh库.md">
+            
+                <span>
+            
+                    
+                    第3节：bokeh库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第9节：matplotlib绘图分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="matplotlib&#x7ED8;&#x56FE;&#x5206;&#x6790;">matplotlib&#x7ED8;&#x56FE;&#x5206;&#x6790;</h1>
+<p><img src="../assets/chapter04/matplotlib&#x56FE;&#x7ED3;&#x6784;.png" alt=""></p>
+<p>&#x89E3;&#x91CA;&#xFF1A;</p>
+<ol>
+<li><code>Figure</code>&#xFF1A;&#x56FE;&#x5F62;&#x7ED8;&#x5236;&#x7684;&#x753B;&#x677F;&#xFF0C;&#x4ED6;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x9ED1;&#x677F;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x56FE;&#x90FD;&#x662F;&#x7ED8;&#x5236;&#x5728;<code>Figure</code>&#x4E0A;&#x9762;&#x3002;</li>
+<li><code>Axes</code>&#xFF1A;&#x6BCF;&#x4E2A;&#x56FE;&#x90FD;&#x662F;<code>Axes</code>&#x5BF9;&#x8C61;&#x3002;&#x4E00;&#x4E2A;<code>Figure</code>&#x4E0A;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;<code>Axes</code>&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>Axis</code>&#xFF1A;<code>x</code>&#x8F74;&#x3001;<code>y</code>&#x8F74;&#x7684;&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>Tick</code>&#xFF1A;<code>x</code>&#x8F74;&#x548C;<code>y</code>&#x8F74;&#x4E0A;&#x7684;&#x523B;&#x5EA6;&#x5BF9;&#x8C61;&#x3002;&#x6BCF;&#x4E00;&#x4E2A;&#x523B;&#x5EA6;&#x90FD;&#x662F;&#x4E00;&#x4E2A;<code>Tick</code>&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>TickLabel</code>&#xFF1A;&#x6BCF;&#x4E2A;&#x523B;&#x5EA6;&#x4E0A;&#x90FD;&#x8981;&#x663E;&#x793A;&#x6587;&#x5B57;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x5B57;&#x7684;&#x663E;&#x793A;&#x5C31;&#x662F;&#x5728;<code>TickLabel</code>&#x4E0A;&#x3002;</li>
+<li><code>AxisLabel</code>&#xFF1A;<code>x</code>&#x8F74;&#x548C;<code>y</code>&#x8F74;&#x7684;&#x540D;&#x79F0;&#x7684;&#x6587;&#x5B57;&#x663E;&#x793A;&#x3002;</li>
+<li><code>Legend</code>&#xFF1A;&#x56FE;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>Title</code>&#xFF1A;<code>Axes</code>&#x56FE;&#x7684;&#x6807;&#x9898;&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>Line2D</code>&#xFF1A;&#x7ED8;&#x5236;&#x5728;<code>Axes</code>&#x4E0A;&#x7684;&#x7EBF;&#x6761;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;&#x6298;&#x7EBF;&#x56FE;&#x7B49;&#x3002;</li>
+<li><code>Reactangle</code>&#xFF1A;&#x7ED8;&#x5236;&#x5728;<code>Axes</code>&#x4E0A;&#x7684;&#x77E9;&#x5F62;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;&#x6761;&#x5F62;&#x56FE;&#x7B49;&#x3002;</li>
+<li><code>Marker</code>&#xFF1A;&#x6807;&#x8BB0;&#x70B9;&#xFF0C;&#x6BD4;&#x5982;&#x7ED8;&#x5236;&#x6563;&#x70B9;&#x56FE;&#x4E0A;&#x7684;&#x6BCF;&#x4E2A;&#x70B9;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</li>
+<li><code>Artist</code>&#xFF1A;&#x53EA;&#x8981;&#x662F;&#x7ED8;&#x5236;&#x5728;<code>Figure</code>&#x4E0A;&#x7684;&#x5143;&#x7D20;&#xFF08;&#x5305;&#x62EC;Figure&#xFF09;&#xFF0C;&#x90FD;&#x662F;<code>Artist</code>&#x7684;&#x5B50;&#x7C7B;&#x3002;</li>
+</ol>
+<h2 id="&#x4E00;&#x3001;figure&#x5BB9;&#x5668;&#xFF1A;">&#x4E00;&#x3001;Figure&#x5BB9;&#x5668;&#xFF1A;</h2>
+<p><code>Figure</code>&#x5BB9;&#x5668;&#x662F;&#x6700;&#x9876;&#x5C42;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x4ED6;&#x51E0;&#x4E4E;&#x5305;&#x542B;&#x4E86;&#x8FD9;&#x4E2A;&#x56FE;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x3002;&#x901A;&#x8FC7;<code>add_subplot</code>&#x548C;<code>add_axes</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;<code>Axes</code>&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x7684;&#x90FD;&#x662F;<code>Axes</code>&#x53CA;&#x5176;&#x5B50;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x6DFB;&#x52A0;&#x5B8C;&#x6210;&#x540E;&#x662F;&#x5B58;&#x50A8;&#x5728;<code>figure.axes</code>&#x4E2D;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">156</span>]: fig = plt.figure()
+In [<span class="hljs-number">157</span>]: ax1 = fig.add_subplot(<span class="hljs-number">211</span>)
+In [<span class="hljs-number">158</span>]: ax2 = fig.add_axes([<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">0.3</span>])
+In [<span class="hljs-number">159</span>]: ax1
+Out[<span class="hljs-number">159</span>]: &lt;matplotlib.axes.Subplot instance at <span class="hljs-number">0xd54b26c</span>&gt;
+In [<span class="hljs-number">160</span>]: print(fig.axes)
+[&lt;matplotlib.axes.Subplot instance at <span class="hljs-number">0xd54b26c</span>&gt;, &lt;matplotlib.axes.Axes instance at <span class="hljs-number">0xd3f0b2c</span>&gt;]
+</code></pre>
+<h3 id="11-&#x6DFB;&#x52A0;axes&#x5BF9;&#x8C61;&#xFF1A;">1.1. &#x6DFB;&#x52A0;Axes&#x5BF9;&#x8C61;&#xFF1A;</h3>
+<p><code>Figure</code>&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x9ED1;&#x677F;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x7ED8;&#x56FE;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x6DFB;&#x52A0;<code>Axes</code>&#x3002;&#x6DFB;&#x52A0;<code>Axes</code>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>add_axes</code>&#x548C;<code>add_subplot</code>&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;figure&#x5BF9;&#x8C61;</span>
+fig = plt.figure()
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;Axes</span>
+ax1 = fig.add_subplot(<span class="hljs-number">211</span>)
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;Axes&#xFF0C;&#x5176;&#x4E2D;&#x53C2;&#x6570;&#x662F;left,bottom,width,height</span>
+ax2 = fig.add_axes([<span class="hljs-number">0.1</span>,<span class="hljs-number">0.1</span>,<span class="hljs-number">0.8</span>,<span class="hljs-number">0.3</span>])
+</code></pre>
+<h3 id="12-&#x64CD;&#x4F5C;&#x5F53;&#x524D;axes&#x5BF9;&#x8C61;&#xFF1A;">1.2. &#x64CD;&#x4F5C;&#x5F53;&#x524D;Axes&#x5BF9;&#x8C61;&#xFF1A;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>figure.gca</code>&#x4EE5;&#x53CA;<code>figure.sca</code>&#x6765;&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;<code>axes</code>&#x5BF9;&#x8C61;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python">fig = plt.figure()
+ax1 = fig.add_subplot(<span class="hljs-number">211</span>)
+ax2 = fig.add_axes([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0.3</span>])
+print(fig.gca())
+print(fig.sca(ax1))
+
+&gt;&gt; Axes(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>;<span class="hljs-number">1</span>x0<span class="hljs-number">.3</span>)
+&gt;&gt; AxesSubplot(<span class="hljs-number">0.125</span>,<span class="hljs-number">0.536818</span>;<span class="hljs-number">0.775</span>x0<span class="hljs-number">.343182</span>)
+</code></pre>
+<h3 id="13-&#x5220;&#x9664;axes&#x5BF9;&#x8C61;&#xFF1A;">1.3. &#x5220;&#x9664;Axes&#x5BF9;&#x8C61;&#xFF1A;</h3>
+<p><code>Figure</code>&#x4E0A;&#x7684;&#x6240;&#x6709;<code>Axes</code>&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x4FDD;&#x5B58;&#x5728;<code>fig.axes</code>&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5220;&#x9664;&#x67D0;&#x4E2A;<code>Axes</code>&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x901A;&#x8FC7;<code>delaxes</code>&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-python">fig = plt.figure()
+ax1 = fig.add_subplot(<span class="hljs-number">211</span>)
+ax2 = fig.add_axes([<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0.3</span>])
+fig.delaxes(ax1)
+print(fig.axes)
+</code></pre>
+<h3 id="14-&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;axes&#xFF1A;">1.4. &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;axes&#xFF1A;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> ax <span class="hljs-keyword">in</span> fig.axes:
+    ax.grid(<span class="hljs-keyword">True</span>) <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x6253;&#x5F00;&#x7F51;&#x683C;</span>
+</code></pre>
+<h3 id="15-figure&#x7684;&#x5C5E;&#x6027;&#x6709;&#x5982;&#x4E0B;&#xFF1A;">1.5. <code>Figure</code>&#x7684;&#x5C5E;&#x6027;&#x6709;&#x5982;&#x4E0B;&#xFF1A;</h3>
+<p><img src="../assets/chapter05/figure&#x5C5E;&#x6027;.png" alt=""></p>
+<p><code>Figure</code><strong>&#x7C7B;&#x5B9A;&#x4E49;&#x4ECB;&#x7ECD;&#xFF1A;</strong><a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" target="_blank">https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure</a></p>
+<h2 id="&#x4E8C;&#x3001;axes&#x5BB9;&#x5668;&#xFF1A;">&#x4E8C;&#x3001;Axes&#x5BB9;&#x5668;&#xFF1A;</h2>
+<p><code>Axes</code>&#x5BB9;&#x5668;&#x662F;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x5177;&#x4F53;&#x7684;&#x56FE;&#x5F62;&#x7684;&#x3002;&#x6BD4;&#x5982;&#x753B;&#x66F2;&#x7EBF;&#xFF0C;&#x67F1;&#x72B6;&#x56FE;&#xFF0C;&#x90FD;&#x662F;&#x753B;&#x5728;&#x4E0A;&#x9762;&#x3002;&#x6240;&#x4EE5;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5B66;&#x7684;&#x4F7F;&#x7528;<code>plt.xx</code>&#x7ED8;&#x5236;&#x5404;&#x79CD;&#x56FE;&#x5F62;&#xFF08;&#x6BD4;&#x5982;&#x6761;&#x5F62;&#x56FE;&#xFF0C;&#x76F4;&#x65B9;&#x56FE;&#xFF0C;&#x6563;&#x70B9;&#x56FE;&#x7B49;&#xFF09;&#x90FD;&#x662F;&#x5BF9;<code>Axes</code>&#x7684;&#x5C01;&#x88C5;&#x3002;&#x6BD4;&#x5982;<code>plt.plot</code>&#x5BF9;&#x5E94;&#x7684;&#x662F;<code>axes.plot</code>&#xFF0C;&#x6BD4;&#x5982;<code>plt.hist</code>&#x5BF9;&#x5E94;&#x7684;&#x662F;<code>axes.hist</code>&#x3002;&#x9488;&#x5BF9;&#x56FE;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x5728;<code>Axes</code>&#x4E0A;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;<code>API</code>&#x3002;&#x53E6;&#x5916;&#x540E;&#x9762;&#x8981;&#x8BB2;&#x5230;&#x7684;<code>Axis</code>&#x5BB9;&#x5668;&#xFF0C;&#x662F;&#x8F74;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x662F;&#x7ED1;&#x5B9A;&#x5728;<code>Axes</code>&#x4E0A;&#x9762;&#x3002;<br><strong>Axes&#x7684;&#x7C7B;&#x5B9A;&#x4E49;&#x4ECB;&#x7ECD;&#xFF1A;</strong><a href="https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes" target="_blank">https://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes</a></p>
+<h3 id="21-&#x8BBE;&#x7F6E;x&#x548C;y&#x8F74;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF1A;">2.1. &#x8BBE;&#x7F6E;x&#x548C;y&#x8F74;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#xFF1A;</h3>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x523B;&#x5EA6;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;x&#x8F74;&#x548C;y&#x8F74;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>set_xlim/set_ylim</code>&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-python">fig = plt.figure()  
+axes = fig.add_subplot(<span class="hljs-number">111</span>)  
+axes.plot(np.random.randn(<span class="hljs-number">10</span>))
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;x&#x8F74;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;</span>
+axes.set_xlim(<span class="hljs-number">-2</span>,<span class="hljs-number">12</span>)
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;y&#x8F74;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;</span>
+axes.set_ylim(<span class="hljs-number">-3</span>,<span class="hljs-number">3</span>)
+</code></pre>
+<h3 id="22-&#x6DFB;&#x52A0;&#x6587;&#x672C;&#xFF1A;">2.2. &#x6DFB;&#x52A0;&#x6587;&#x672C;&#xFF1A;</h3>
+<p>&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&#x6587;&#x672C;&#x6211;&#x4EEC;&#x7528;&#x7684;&#x662F;<code>annotate</code>&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x9700;&#x8981;&#x505A;&#x6CE8;&#x91CA;&#xFF0C;&#x5176;&#x5B9E;&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4F7F;&#x7528;<code>text</code>&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python">data = np.random.randn(<span class="hljs-number">10</span>)
+fig = plt.figure()
+axes = fig.add_subplot(<span class="hljs-number">111</span>)
+axes.plot(data)
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x6587;&#x672C;&#xFF0C;&#x6BD4;annotate&#x66F4;&#x52A0;&#x65B9;&#x4FBF;</span>
+axes.text(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-string">&quot;hello&quot;</span>)
+</code></pre>
+<h3 id="23-&#x7ED8;&#x5236;&#x53CC;y&#x8F74;&#xFF1A;">2.3. &#x7ED8;&#x5236;&#x53CC;<code>Y</code>&#x8F74;&#xFF1A;</h3>
+<pre><code class="lang-python">fig = plt.figure()
+ax1 = fig.add_subplot(<span class="hljs-number">211</span>)
+ax1.bar(np.arange(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>,<span class="hljs-number">2</span>),np.random.rand(<span class="hljs-number">5</span>))
+ax1.set_yticks(np.arange(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0.25</span>))
+ax2 = ax1.twinx() <span class="hljs-comment">#&#x514B;&#x9686;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;x&#x8F74;&#x7684;axes&#x5BF9;&#x8C61;</span>
+ax2.plot(np.random.randn(<span class="hljs-number">10</span>),c=<span class="hljs-string">&quot;b&quot;</span>)
+plt.show()
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#x5982;&#x4E0B;&#xFF1A;<br><img src="../assets/chapter04/&#x53CC;Y&#x8F74;&#x6548;&#x679C;&#x56FE;.png" alt=""></p>
+<h2 id="&#x4E09;&#x3001;axis&#x5BB9;&#x5668;&#xFF1A;">&#x4E09;&#x3001;Axis&#x5BB9;&#x5668;&#xFF1A;</h2>
+<p><code>Axis</code>&#x4EE3;&#x8868;&#x7684;&#x662F;<code>x</code>&#x8F74;&#x6216;&#x8005;<code>y</code>&#x8F74;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5305;&#x542B;<code>Tick</code>&#xFF08;&#x523B;&#x5EA6;&#xFF09;&#x5BF9;&#x8C61;&#xFF0C;<code>TickLabel</code>&#x523B;&#x5EA6;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x53CA;<code>AxisLabel</code>&#x5750;&#x6807;&#x8F74;&#x6587;&#x672C;&#x5BF9;&#x8C61;&#x3002;<code>axis</code>&#x5BF9;&#x8C61;&#x6709;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x523B;&#x5EA6;&#x548C;&#x6587;&#x672C;&#x7B49;&#x3002;</p>
+<h3 id="31-&#x8BBE;&#x7F6E;x&#x8F74;&#x548C;y&#x8F74;label&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;">3.1. &#x8BBE;&#x7F6E;x&#x8F74;&#x548C;y&#x8F74;label&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;</h3>
+<pre><code class="lang-python">fig = plt.figure()
+axes = fig.add_subplot(<span class="hljs-number">111</span>)
+axes.plot(np.random.randn(<span class="hljs-number">10</span>))
+axes.set_xlabel(<span class="hljs-string">&quot;x coordate&quot;</span>)
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;x&#x8F74;label&#x7684;&#x4F4D;&#x7F6E;&#x4E3A;(0.-0.1)</span>
+axes.xaxis.set_label_coords(<span class="hljs-number">0</span>,<span class="hljs-number">-0.1</span>)
+</code></pre>
+<h3 id="32-&#x8BBE;&#x7F6E;&#x523B;&#x5EA6;&#x4E0A;&#x7684;&#x523B;&#x5EA6;&#x683C;&#x5F0F;&#xFF1A;">3.2. &#x8BBE;&#x7F6E;&#x523B;&#x5EA6;&#x4E0A;&#x7684;&#x523B;&#x5EA6;&#x683C;&#x5F0F;&#xFF1A;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.ticker <span class="hljs-keyword">as</span> ticker
+fig = plt.figure()
+axes = fig.add_subplot(<span class="hljs-number">111</span>)
+axes.plot(np.random.randn(<span class="hljs-number">10</span>))
+axes.set_xlabel(<span class="hljs-string">&quot;x coordate&quot;</span>)
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x683C;&#x5F0F;&#x5316;&#x5BF9;&#x8C61;</span>
+formatter = ticker.FormatStrFormatter(<span class="hljs-string">&apos;%.2f&apos;</span>)
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x683C;&#x5F0F;&#x5316;&#x5BF9;&#x8C61;</span>
+axes.yaxis.set_major_formatter(formatter)
+</code></pre>
+<h3 id="33-&#x8BBE;&#x7F6E;&#x8F74;&#x7684;&#x5C5E;&#x6027;&#xFF1A;">3.3. &#x8BBE;&#x7F6E;&#x8F74;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</h3>
+<pre><code class="lang-python">fig = plt.figure()
+
+ax1 = fig.add_axes([<span class="hljs-number">0.1</span>, <span class="hljs-number">0.3</span>, <span class="hljs-number">0.4</span>, <span class="hljs-number">0.4</span>])
+ax1.set_facecolor(<span class="hljs-string">&apos;lightslategray&apos;</span>)
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x523B;&#x5EA6;&#x4E0A;&#x6587;&#x672C;&#x7684;&#x5C5E;&#x6027;</span>
+<span class="hljs-keyword">for</span> label <span class="hljs-keyword">in</span> ax1.xaxis.get_ticklabels():
+    <span class="hljs-comment"># label&#x662F;&#x4E00;&#x4E2A;Label&#x5BF9;&#x8C61;</span>
+    label.set_color(<span class="hljs-string">&apos;red&apos;</span>)
+    label.set_rotation(<span class="hljs-number">45</span>)
+    label.set_fontsize(<span class="hljs-number">16</span>)
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x523B;&#x5EA6;&#x4E0A;&#x7EBF;&#x6761;&#x7684;&#x5C5E;&#x6027;</span>
+<span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> ax1.yaxis.get_ticklines():
+    <span class="hljs-comment"># line&#x662F;&#x4E00;&#x4E2A;Line2D&#x5BF9;&#x8C61;</span>
+    line.set_color(<span class="hljs-string">&apos;green&apos;</span>)
+    line.set_markersize(<span class="hljs-number">25</span>)
+    line.set_markeredgewidth(<span class="hljs-number">3</span>)
+
+plt.show()
+</code></pre>
+<p><img src="../assets/chapter05/axis&#x5BB9;&#x5668;.png" alt=""></p>
+<h2 id="&#x56DB;&#x3001;tick&#x5BB9;&#x5668;&#xFF1A;">&#x56DB;&#x3001;Tick&#x5BB9;&#x5668;&#xFF1A;</h2>
+<p><code>Tick</code>&#x662F;&#x7528;&#x6765;&#x505A;&#x523B;&#x5EA6;&#x7684;&#xFF0C;&#x5305;&#x62EC;&#x523B;&#x5EA6;&#x548C;&#x7F51;&#x683C;&#x5BF9;&#x8C61;&#x3002;&#x5176;&#x4E2D;&#x53EF;&#x64CD;&#x4F5C;&#x7684;&#x5C5E;&#x6027;&#x5982;&#x4E0B;&#xFF1A;<br><img src="../assets/chapter05/Tick&#x5BB9;&#x5668;.png" alt=""><br>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.ticker <span class="hljs-keyword">as</span> ticker
+
+<span class="hljs-comment"># Fixing random state for reproducibility</span>
+np.random.seed(<span class="hljs-number">19680801</span>)
+
+fig, ax = plt.subplots()
+ax.plot(<span class="hljs-number">100</span>*np.random.rand(<span class="hljs-number">20</span>))
+
+formatter = ticker.FormatStrFormatter(<span class="hljs-string">&apos;$%.2f&apos;</span>)
+ax.yaxis.set_major_formatter(formatter)
+
+<span class="hljs-keyword">for</span> tick <span class="hljs-keyword">in</span> ax.yaxis.get_major_ticks():
+    tick.label1On = <span class="hljs-keyword">False</span>
+    tick.label2On = <span class="hljs-keyword">True</span>
+    tick.label2.set_color(<span class="hljs-string">&apos;green&apos;</span>)
+
+plt.show()
+</code></pre>
+<p><img src="../assets/chapter05/Tick&#x6848;&#x4F8B;&#x56FE;.png" alt=""></p>
+<p>&#x66F4;&#x591A;&#x8BF7;&#x53C2;&#x8003;&#xFF1A;<br><a href="https://matplotlib.org/api/axis_api.html#matplotlib.axis.Tick" target="_blank">https://matplotlib.org/api/axis_api.html#matplotlib.axis.Axis</a></p>
+<h3 id="&#x53C2;&#x8003;&#xFF1A;">&#x53C2;&#x8003;&#xFF1A;</h3>
+<p><a href="https://matplotlib.org/tutorials/intermediate/artists.html#sphx-glr-tutorials-intermediate-artists-py" target="_blank">https://matplotlib.org/tutorials/intermediate/artists.html#sphx-glr-tutorials-intermediate-artists-py</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08雷达图.html" class="navigation navigation-prev " aria-label="Previous page: 第8节：雷达图">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10多图布局.html" class="navigation navigation-next " aria-label="Next page: 第10节：多图布局">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第9节：matplotlib绘图分析","level":"1.5.9","depth":2,"next":{"title":"第10节：多图布局","level":"1.5.10","depth":2,"path":"chapter4/10多图布局.md","ref":"chapter4/10多图布局.md","articles":[]},"previous":{"title":"第8节：雷达图","level":"1.5.8","depth":2,"path":"chapter4/08雷达图.md","ref":"chapter4/08雷达图.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter4/09matplotlib绘图分析.md","mtime":"2019-06-03T13:59:41.115Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-16T03:09:20.760Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

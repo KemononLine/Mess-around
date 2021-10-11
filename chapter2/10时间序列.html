@@ -1,0 +1,1639 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第10节：时间序列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter4/00.html" />
+    
+    
+    <link rel="prev" href="09聚合和分组.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter0/00.html">
+            
+                <a href="../chapter0/00.html">
+            
+                    
+                    第一章：数据分析前奏
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter0/01什么是数据分析.html">
+            
+                <a href="../chapter0/01什么是数据分析.html">
+            
+                    
+                    第1节：什么是数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter0/02环境搭建.html">
+            
+                <a href="../chapter0/02环境搭建.html">
+            
+                    
+                    第2节：环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter0/03jupyternotebook使用.html">
+            
+                <a href="../chapter0/03jupyternotebook使用.html">
+            
+                    
+                    第3节：jupyternotebook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter0/04作业.html">
+            
+                <a href="../chapter0/04作业.html">
+            
+                    
+                    第4节：作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter1/00.html">
+            
+                <a href="../chapter1/00.html">
+            
+                    
+                    第二章：Numpy库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter1/01numpy库介绍.html">
+            
+                <a href="../chapter1/01numpy库介绍.html">
+            
+                    
+                    第1节：numpy库介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter1/02numpy数组基本.html">
+            
+                <a href="../chapter1/02numpy数组基本.html">
+            
+                    
+                    第2节：numpy数组基本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter1/03numpy数组操作.html">
+            
+                <a href="../chapter1/03numpy数组操作.html">
+            
+                    
+                    第3节：numpy数组操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter1/03numpy索引和切片.html">
+            
+                <a href="../chapter1/03numpy索引和切片.html">
+            
+                    
+                    第4节：numpy索引和切片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter1/04Numpy索引和切片作业.html">
+            
+                <a href="../chapter1/04Numpy索引和切片作业.html">
+            
+                    
+                    第5节：Numpy索引和切片作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter1/05numpy数组操作.html">
+            
+                <a href="../chapter1/05numpy数组操作.html">
+            
+                    
+                    第6节：numpy数组操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter1/06深拷贝和浅拷贝.html">
+            
+                <a href="../chapter1/06深拷贝和浅拷贝.html">
+            
+                    
+                    第7节：深拷贝和浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../chapter1/07文件操作.html">
+            
+                <a href="../chapter1/07文件操作.html">
+            
+                    
+                    第8节：文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../chapter1/08数组操作和文件操作作业.html">
+            
+                <a href="../chapter1/08数组操作和文件操作作业.html">
+            
+                    
+                    第9节：数组操作和文件操作作业.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../chapter1/09NAN和INF值处理.html">
+            
+                <a href="../chapter1/09NAN和INF值处理.html">
+            
+                    
+                    第10节：NAN和INF值处理.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../chapter1/10random模块.html">
+            
+                <a href="../chapter1/10random模块.html">
+            
+                    
+                    第11节：random模块.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../chapter1/11axis理解.html">
+            
+                <a href="../chapter1/11axis理解.html">
+            
+                    
+                    第12节：axis理解.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../chapter1/12通用函数.html">
+            
+                <a href="../chapter1/12通用函数.html">
+            
+                    
+                    第13节：通用函数.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../chapter1/13numpy练习题.html">
+            
+                <a href="../chapter1/13numpy练习题.html">
+            
+                    
+                    第14节：numpy练习题.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    第三章：Pandas库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="01pandas介绍.html">
+            
+                <a href="01pandas介绍.html">
+            
+                    
+                    第1节：pandas介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02pandas索引操作.html">
+            
+                <a href="02pandas索引操作.html">
+            
+                    
+                    第2节：pandas索引操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="03pandas对齐运算.html">
+            
+                <a href="03pandas对齐运算.html">
+            
+                    
+                    第3节：pandas对齐运算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="04pandas函数应用.html">
+            
+                <a href="04pandas函数应用.html">
+            
+                    
+                    第4节：pandas函数应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="05pandas层级索引.html">
+            
+                <a href="05pandas层级索引.html">
+            
+                    
+                    第5节：pandas层级索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="06pandas统计计算和描述.html">
+            
+                <a href="06pandas统计计算和描述.html">
+            
+                    
+                    第6节：pandas统计计算和描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="07文件操作.html">
+            
+                <a href="07文件操作.html">
+            
+                    
+                    第7节：文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="08数据清洗.html">
+            
+                <a href="08数据清洗.html">
+            
+                    
+                    第8节：数据清洗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="09聚合和分组.html">
+            
+                <a href="09聚合和分组.html">
+            
+                    
+                    第9节：聚合和分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.10" data-path="10时间序列.html">
+            
+                <a href="10时间序列.html">
+            
+                    
+                    第10节：时间序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/00.html">
+            
+                <a href="../chapter4/00.html">
+            
+                    
+                    第四章：Matploblib库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/01常用图.html">
+            
+                <a href="../chapter4/01常用图.html">
+            
+                    
+                    第1节：常用图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/02基本使用.html">
+            
+                <a href="../chapter4/02基本使用.html">
+            
+                    
+                    第2节：基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/03条形图.html">
+            
+                <a href="../chapter4/03条形图.html">
+            
+                    
+                    第3节：条形图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/04直方图.html">
+            
+                <a href="../chapter4/04直方图.html">
+            
+                    
+                    第4节：直方图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/05散点图.html">
+            
+                <a href="../chapter4/05散点图.html">
+            
+                    
+                    第5节：散点图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/06饼图.html">
+            
+                <a href="../chapter4/06饼图.html">
+            
+                    
+                    第6节：饼图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../chapter4/07箱线图.html">
+            
+                <a href="../chapter4/07箱线图.html">
+            
+                    
+                    第7节：箱线图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../chapter4/08雷达图.html">
+            
+                <a href="../chapter4/08雷达图.html">
+            
+                    
+                    第8节：雷达图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../chapter4/09matplotlib绘图分析.html">
+            
+                <a href="../chapter4/09matplotlib绘图分析.html">
+            
+                    
+                    第9节：matplotlib绘图分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../chapter4/10多图布局.html">
+            
+                <a href="../chapter4/10多图布局.html">
+            
+                    
+                    第10节：多图布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../chapter4/11matplotlib配置.html">
+            
+                <a href="../chapter4/11matplotlib配置.html">
+            
+                    
+                    第11节：matplotlib配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../chapter4/12matplotlib作业.html">
+            
+                <a href="../chapter4/12matplotlib作业.html">
+            
+                    
+                    第12节：matplotlib作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/00.html">
+            
+                <a href="../chapter5/00.html">
+            
+                    
+                    第五章：Seaborn库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/01关系绘图.html">
+            
+                <a href="../chapter5/01关系绘图.html">
+            
+                    
+                    第1节：关系绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/02分类绘图.html">
+            
+                <a href="../chapter5/02分类绘图.html">
+            
+                    
+                    第2节：分类绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/03分布绘图.html">
+            
+                <a href="../chapter5/03分布绘图.html">
+            
+                    
+                    第3节：分布绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/04线性关系绘图.html">
+            
+                <a href="../chapter5/04线性关系绘图.html">
+            
+                    
+                    第4节：线性关系绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/05FacetGrid结构图.html">
+            
+                <a href="../chapter5/05FacetGrid结构图.html">
+            
+                    
+                    第5节：FacetGrid结构图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/06样式设置.html">
+            
+                <a href="../chapter5/06样式设置.html">
+            
+                    
+                    第6节：样式设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter5/07调色盘设置.html">
+            
+                <a href="../chapter5/07调色盘设置.html">
+            
+                    
+                    第7节：调色盘设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../chapter5/08seaborn作业.html">
+            
+                <a href="../chapter5/08seaborn作业.html">
+            
+                    
+                    第8节：seaborn作业
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/00.html">
+            
+                <a href="../chapter6/00.html">
+            
+                    
+                    第六章：pyecharts库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/01快速开始.html">
+            
+                <a href="../chapter6/01快速开始.html">
+            
+                    
+                    第1节：快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/02全局配置项.html">
+            
+                <a href="../chapter6/02全局配置项.html">
+            
+                    
+                    第2节：全局配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/03条形图.html">
+            
+                <a href="../chapter6/03条形图.html">
+            
+                    
+                    第3节：条形图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/04箱线图.html">
+            
+                <a href="../chapter6/04箱线图.html">
+            
+                    
+                    第4节：箱线图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter6/05散点图.html">
+            
+                <a href="../chapter6/05散点图.html">
+            
+                    
+                    第5节：散点图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter6/06地理图.html">
+            
+                <a href="../chapter6/06地理图.html">
+            
+                    
+                    第6节：地理图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../chapter6/07关系图.html">
+            
+                <a href="../chapter6/07关系图.html">
+            
+                    
+                    第7节：关系图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter3/00.html">
+            
+                <a href="../chapter3/00.html">
+            
+                    
+                    第七章：统计分析强化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter3/01常用专业数学术语.html">
+            
+                <a href="../chapter3/01常用专业数学术语.html">
+            
+                    
+                    第1节：常用专业数学术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter3/02平均数.html">
+            
+                <a href="../chapter3/02平均数.html">
+            
+                    
+                    第2节：平均数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter3/03方差和标准差.html">
+            
+                <a href="../chapter3/03方差和标准差.html">
+            
+                    
+                    第3节：方差和标准差
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter3/04正态分布.html">
+            
+                <a href="../chapter3/04正态分布.html">
+            
+                    
+                    第4节：正态分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../chapter3/05对比分析.html">
+            
+                <a href="../chapter3/05对比分析.html">
+            
+                    
+                    第5节：对比分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../chapter3/06分布分析.html">
+            
+                <a href="../chapter3/06分布分析.html">
+            
+                    
+                    第6节：分布分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../chapter3/07交叉分析.html">
+            
+                <a href="../chapter3/07交叉分析.html">
+            
+                    
+                    第7节：交叉分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../chapter3/08统计分析.html">
+            
+                <a href="../chapter3/08统计分析.html">
+            
+                    
+                    第8节：统计分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../chapter3/09帕累托分析.html">
+            
+                <a href="../chapter3/09帕累托分析.html">
+            
+                    
+                    第9节：帕累托分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../chapter3/10矩阵关联分析.html">
+            
+                <a href="../chapter3/10矩阵关联分析.html">
+            
+                    
+                    第10节：矩阵关联分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../chapter3/11综合性分析.html">
+            
+                <a href="../chapter3/11综合性分析.html">
+            
+                    
+                    第11节：综合性分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter7/00.html">
+            
+                <a href="../chapter7/00.html">
+            
+                    
+                    第八章：数据分析实战
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter6/01App数据分析实战.md">
+            
+                <span>
+            
+                    
+                    第1节：App数据分析实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter6/02心脏病患者数据分析.md">
+            
+                <span>
+            
+                    
+                    第2节：心脏病患者数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter6/03StackoverFlow数据分析.md">
+            
+                <span>
+            
+                    
+                    第3节：StackoverFlow数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter6/04二手房数据分析.md">
+            
+                <span>
+            
+                    
+                    第4节：二手房数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../chapter6/05吃鸡数据分析.md">
+            
+                <span>
+            
+                    
+                    第5节：吃鸡数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../chapter6/06黑色星期五数据分析.md">
+            
+                <span>
+            
+                    
+                    第6节：黑色星期五数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter8/00.html">
+            
+                <a href="../chapter8/00.html">
+            
+                    
+                    第九章：补充
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter7/01用Excel做数据分析.md">
+            
+                <span>
+            
+                    
+                    第1节：用Excel做数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter7/02echarts和pyecharts库.md">
+            
+                <span>
+            
+                    
+                    第2节：echarts和pyecharts库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter7/03bokeh库.md">
+            
+                <span>
+            
+                    
+                    第3节：bokeh库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第10节：时间序列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pandas&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;">Pandas&#x4E2D;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;</h1>
+<p>&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#xFF08;time series&#xFF09;&#x6570;&#x636E;&#x662F;&#x4E00;&#x79CD;&#x91CD;&#x8981;&#x7684;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x5F62;&#x5F0F;&#xFF0C;&#x3002;&#x5728;&#x591A;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x89C2;&#x5BDF;&#x6216;&#x6D4B;&#x91CF;&#x5230;&#x7684;&#x4EFB;&#x4F55;&#x65F6;&#x95F4;&#x90FD;&#x53EF;&#x4EE5;&#x5F62;&#x6210;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x3002;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#xFF0C; &#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x662F;&#x56FA;&#x5B9A;&#x9891;&#x7387;&#x7684;&#xFF0C; &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C; &#x6570;&#x636E;&#x70B9;&#x662F;&#x6839;&#x636E;&#x67D0;&#x79CD;&#x89C4;&#x5F8B;&#x5B9A;&#x671F;&#x51FA;&#x73B0;&#x7684;&#xFF08;&#x6BD4;&#x5982;&#x6BCF;15&#x79D2;&#x3002;&#x3002;&#x3002;&#x3002;&#xFF09;&#x3002;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E0D;&#x5B9A;&#x671F;&#x7684;&#x3002;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x6570;&#x636E;&#x7684;&#x610F;&#x4E49;&#x53D6;&#x51B3;&#x4E8E;&#x5177;&#x4F53;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;&#x4E3B;&#x8981;&#x7531;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x65F6;&#x95F4;&#x6233;&#xFF08;timestamp&#xFF09;&#xFF0C;&#x7279;&#x5B9A;&#x7684;&#x65F6;&#x523B;&#x3002;</li>
+<li>&#x56FA;&#x5B9A;&#x65F6;&#x671F;&#xFF08;period&#xFF09;&#xFF0C;&#x5982;2007&#x5E74;1&#x6708;&#x6216;2010&#x5E74;&#x5168;&#x5E74;&#x3002;</li>
+<li>&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;interval&#xFF09;&#xFF0C;&#x7531;&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x6233;&#x8868;&#x793A;&#x3002;&#x65F6;&#x671F;&#xFF08;period&#xFF09;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x505A;&#x95F4;&#x9694;&#xFF08;interval&#xFF09;&#x7684;&#x7279;&#x4F8B;&#x3002;</li>
+</ul>
+<h3 id="1-&#x65F6;&#x95F4;&#x548C;&#x65E5;&#x671F;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53CA;&#x5176;&#x5DE5;&#x5177;&#xFF1A;">1. &#x65F6;&#x95F4;&#x548C;&#x65E5;&#x671F;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53CA;&#x5176;&#x5DE5;&#x5177;&#xFF1A;</h3>
+<p>Python&#x6807;&#x51C6;&#x5E93;&#x5305;&#x542B;&#x7528;&#x4E8E;&#x65E5;&#x671F;&#xFF08;date&#xFF09;&#x548C;&#x65F6;&#x95F4;&#xFF08;time&#xFF09;&#x6570;&#x636E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x6709;&#x65E5;&#x5386;&#x65B9;&#x9762;&#x7684;&#x529F;&#x80FD;&#x3002;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x4F1A;&#x7528;&#x5230;datetime&#x3001;time&#x4EE5;&#x53CA;calendar&#x6A21;&#x5757;&#x3002;datetime.datetime&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x4E3A;datetime&#xFF09;&#x662F;&#x7528;&#x5F97;&#x6700;&#x591A;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">10</span>]: <span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime
+
+In [<span class="hljs-number">11</span>]: now = datetime.now()
+
+In [<span class="hljs-number">12</span>]: now
+Out[<span class="hljs-number">12</span>]: datetime.datetime(<span class="hljs-number">2017</span>, <span class="hljs-number">9</span>, <span class="hljs-number">25</span>, <span class="hljs-number">14</span>, <span class="hljs-number">5</span>, <span class="hljs-number">52</span>, <span class="hljs-number">72973</span>)
+
+In [<span class="hljs-number">13</span>]: now.year, now.month, now.day
+Out[<span class="hljs-number">13</span>]: (<span class="hljs-number">2017</span>, <span class="hljs-number">9</span>, <span class="hljs-number">25</span>)
+</code></pre>
+<p>datetime&#x4EE5;&#x6BEB;&#x79D2;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x3002;timedelta&#x8868;&#x793A;&#x4E24;&#x4E2A;datetime&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x5DEE;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">14</span>]: delta = datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>) - datetime(<span class="hljs-number">2008</span>, <span class="hljs-number">6</span>, <span class="hljs-number">24</span>, <span class="hljs-number">8</span>, <span class="hljs-number">15</span>)
+
+In [<span class="hljs-number">15</span>]: delta
+Out[<span class="hljs-number">15</span>]: datetime.timedelta(<span class="hljs-number">926</span>, <span class="hljs-number">56700</span>)
+
+In [<span class="hljs-number">16</span>]: delta.days
+Out[<span class="hljs-number">16</span>]: <span class="hljs-number">926</span>
+
+In [<span class="hljs-number">17</span>]: delta.seconds
+Out[<span class="hljs-number">17</span>]: <span class="hljs-number">56700</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x7ED9;datetime&#x5BF9;&#x8C61;&#x52A0;&#x4E0A;&#xFF08;&#x6216;&#x51CF;&#x53BB;&#xFF09;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;timedelta&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">18</span>]: <span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> timedelta
+
+In [<span class="hljs-number">19</span>]: start = datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">1</span>, <span class="hljs-number">7</span>)
+
+In [<span class="hljs-number">20</span>]: start + timedelta(<span class="hljs-number">12</span>)
+Out[<span class="hljs-number">20</span>]: datetime.datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">1</span>, <span class="hljs-number">19</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+In [<span class="hljs-number">21</span>]: start - <span class="hljs-number">2</span> * timedelta(<span class="hljs-number">12</span>)
+Out[<span class="hljs-number">21</span>]: datetime.datetime(<span class="hljs-number">2010</span>, <span class="hljs-number">12</span>, <span class="hljs-number">14</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+</code></pre>
+<p><img src="../assets/101.png" alt=""></p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x548C;datetime&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;">&#x5B57;&#x7B26;&#x4E32;&#x548C;datetime&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;</h2>
+<p>&#x5229;&#x7528;str&#x6216;strftime&#x65B9;&#x6CD5;&#xFF08;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x683C;&#x5F0F;&#x5316;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#xFF0C;datetime&#x5BF9;&#x8C61;&#x548C;pandas&#x7684;Timestamp&#x5BF9;&#x8C61;&#xFF08;&#x7A0D;&#x540E;&#x5C31;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF09;&#x53EF;&#x4EE5;&#x88AB;&#x683C;&#x5F0F;&#x5316;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">22</span>]: stamp = datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>)
+
+In [<span class="hljs-number">23</span>]: str(stamp)
+Out[<span class="hljs-number">23</span>]: <span class="hljs-string">&apos;2011-01-03 00:00:00&apos;</span>
+
+In [<span class="hljs-number">24</span>]: stamp.strftime(<span class="hljs-string">&apos;%Y-%m-%d&apos;</span>)
+Out[<span class="hljs-number">24</span>]: <span class="hljs-string">&apos;2011-01-03&apos;</span>
+</code></pre>
+<p><img src="../assets/102.png" alt=""></p>
+<p>datetime.strptime&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E9B;&#x683C;&#x5F0F;&#x5316;&#x7F16;&#x7801;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x65E5;&#x671F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">26</span>]: datetime.strptime(value, <span class="hljs-string">&apos;%Y-%m-%d&apos;</span>)
+Out[<span class="hljs-number">26</span>]: datetime.datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+
+In [<span class="hljs-number">27</span>]: datestrs = [<span class="hljs-string">&apos;7/6/2011&apos;</span>, <span class="hljs-string">&apos;8/6/2011&apos;</span>]
+
+In [<span class="hljs-number">28</span>]: [datetime.strptime(x, <span class="hljs-string">&apos;%m/%d/%Y&apos;</span>) <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> datestrs]
+Out[<span class="hljs-number">28</span>]: 
+[datetime.datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>),
+ datetime.datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">8</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)]
+</code></pre>
+<p>datetime.strptime&#x662F;&#x901A;&#x8FC7;&#x5DF2;&#x77E5;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x65E5;&#x671F;&#x89E3;&#x6790;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#x3002;&#x4F46;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x7F16;&#x5199;&#x683C;&#x5F0F;&#x5B9A;&#x4E49;&#x662F;&#x5F88;&#x9EBB;&#x70E6;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x65E5;&#x671F;&#x683C;&#x5F0F;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;dateutil&#x8FD9;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x4E2D;&#x7684;parser.parse&#x65B9;&#x6CD5;&#xFF08;pandas&#x4E2D;&#x5DF2;&#x7ECF;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x597D;&#x4E86;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">29</span>]: <span class="hljs-keyword">from</span> dateutil.parser <span class="hljs-keyword">import</span> parse
+
+In [<span class="hljs-number">30</span>]: parse(<span class="hljs-string">&apos;2011-01-03&apos;</span>)
+Out[<span class="hljs-number">30</span>]: datetime.datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+</code></pre>
+<p>dateutil&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x4EBA;&#x7C7B;&#x80FD;&#x591F;&#x7406;&#x89E3;&#x7684;&#x65E5;&#x671F;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">31</span>]: parse(<span class="hljs-string">&apos;Jan 31, 1997 10:45 PM&apos;</span>)
+Out[<span class="hljs-number">31</span>]: datetime.datetime(<span class="hljs-number">1997</span>, <span class="hljs-number">1</span>, <span class="hljs-number">31</span>, <span class="hljs-number">22</span>, <span class="hljs-number">45</span>)
+</code></pre>
+<p>&#x5728;&#x56FD;&#x9645;&#x901A;&#x7528;&#x7684;&#x683C;&#x5F0F;&#x4E2D;&#xFF0C;&#x65E5;&#x51FA;&#x73B0;&#x5728;&#x6708;&#x7684;&#x524D;&#x9762;&#x5F88;&#x666E;&#x904D;&#xFF0C;&#x4F20;&#x5165;dayfirst=True&#x5373;&#x53EF;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">32</span>]: parse(<span class="hljs-string">&apos;6/12/2011&apos;</span>, dayfirst=<span class="hljs-keyword">True</span>)
+Out[<span class="hljs-number">32</span>]: datetime.datetime(<span class="hljs-number">2011</span>, <span class="hljs-number">12</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+</code></pre>
+<p>pandas&#x901A;&#x5E38;&#x662F;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x6210;&#x7EC4;&#x65E5;&#x671F;&#x7684;&#xFF0C;&#x4E0D;&#x7BA1;&#x8FD9;&#x4E9B;&#x65E5;&#x671F;&#x662F;DataFrame&#x7684;&#x8F74;&#x7D22;&#x5F15;&#x8FD8;&#x662F;&#x5217;&#x3002;to_datetime&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x591A;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65E5;&#x671F;&#x8868;&#x793A;&#x5F62;&#x5F0F;&#x3002;&#x5BF9;&#x6807;&#x51C6;&#x65E5;&#x671F;&#x683C;&#x5F0F;&#xFF08;&#x5982;ISO8601&#xFF09;&#x7684;&#x89E3;&#x6790;&#x975E;&#x5E38;&#x5FEB;&#xFF1A;</p>
+<pre><code class="lang-python">In [33]: datestrs = [&apos;2011-07-06 12:00:00&apos;, &apos;2011-08-06 00:00:00&apos;]
+
+In [34]: pd.to_datetime(datestrs)
+Out[34]: DatetimeIndex([&apos;2011-07-06 12:00:00&apos;, &apos;2011-08-06 00:00:00&apos;], dtype=&apos;dat
+etime64[ns]&apos;, freq=None)
+</code></pre>
+<p>&#x5B83;&#x8FD8;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x7F3A;&#x5931;&#x503C;&#xFF08;None&#x3001;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x7B49;&#xFF09;&#xFF1A;</p>
+<pre><code>In [35]: idx = pd.to_datetime(datestrs + [None])
+
+In [36]: idx
+Out[36]: DatetimeIndex([&apos;2011-07-06 12:00:00&apos;, &apos;2011-08-06 00:00:00&apos;, &apos;NaT&apos;], dty
+pe=&apos;datetime64[ns]&apos;, freq=None)
+
+In [37]: idx[2]
+Out[37]: NaT
+
+In [38]: pd.isnull(idx)
+Out[38]: array([False, False,  True], dtype=bool)
+</code></pre><p>NaT&#xFF08;Not a Time&#xFF09;&#x662F;pandas&#x4E2D;&#x65F6;&#x95F4;&#x6233;&#x6570;&#x636E;&#x7684;null&#x503C;&#x3002;</p>
+<h3 id="2-&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x57FA;&#x7840;">2. &#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x57FA;&#x7840;</h3>
+<p>pandas&#x6700;&#x57FA;&#x672C;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x4EE5;&#x65F6;&#x95F4;&#x6233;&#xFF08;&#x901A;&#x5E38;&#x4EE5;Python&#x5B57;&#x7B26;&#x4E32;&#x6216;datatime&#x5BF9;&#x8C61;&#x8868;&#x793A;&#xFF09;&#x4E3A;&#x7D22;&#x5F15;&#x7684;Series&#xFF1A;</p>
+<pre><code>In [39]: from datetime import datetime
+
+In [40]: dates = [datetime(2011, 1, 2), datetime(2011, 1, 5),
+   ....:          datetime(2011, 1, 7), datetime(2011, 1, 8),
+   ....:          datetime(2011, 1, 10), datetime(2011, 1, 12)]
+
+In [41]: ts = pd.Series(np.random.randn(6), index=dates)
+
+In [42]: ts
+Out[42]: 
+2011-01-02   -0.204708
+2011-01-05    0.478943
+2011-01-07   -0.519439
+2011-01-08   -0.555730
+2011-01-10    1.965781
+2011-01-12    1.393406
+dtype: float64
+</code></pre><p>&#x8FD9;&#x4E9B;datetime&#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x88AB;&#x653E;&#x5728;&#x4E00;&#x4E2A;DatetimeIndex&#x4E2D;&#x7684;&#xFF1A;</p>
+<pre><code>In [43]: ts.index
+Out[43]: 
+DatetimeIndex([&apos;2011-01-02&apos;, &apos;2011-01-05&apos;, &apos;2011-01-07&apos;, &apos;2011-01-08&apos;,
+               &apos;2011-01-10&apos;, &apos;2011-01-12&apos;],
+              dtype=&apos;datetime64[ns]&apos;, freq=None)
+</code></pre><p>&#x8DDF;&#x5176;&#x4ED6;Series&#x4E00;&#x6837;&#xFF0C;&#x4E0D;&#x540C;&#x7D22;&#x5F15;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x4E4B;&#x95F4;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x4F1A;&#x81EA;&#x52A8;&#x6309;&#x65E5;&#x671F;&#x5BF9;&#x9F50;&#xFF1A;</p>
+<pre><code>In [44]: ts + ts[::2]
+Out[44]: 
+2011-01-02   -0.409415
+2011-01-05         NaN
+2011-01-07   -1.038877
+2011-01-08         NaN
+2011-01-10    3.931561
+2011-01-12         NaN
+dtype: float64
+</code></pre><p>ts[::2] &#x662F;&#x6BCF;&#x9694;&#x4E24;&#x4E2A;&#x53D6;&#x4E00;&#x4E2A;&#x3002;</p>
+<h2 id="&#x7D22;&#x5F15;&#x3001;&#x9009;&#x53D6;&#x3001;&#x5B50;&#x96C6;&#x6784;&#x9020;">&#x7D22;&#x5F15;&#x3001;&#x9009;&#x53D6;&#x3001;&#x5B50;&#x96C6;&#x6784;&#x9020;</h2>
+<p>&#x5F53;&#x4F60;&#x6839;&#x636E;&#x6807;&#x7B7E;&#x7D22;&#x5F15;&#x9009;&#x53D6;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x548C;&#x5176;&#x5B83;&#x7684;pandas.Series&#x5F88;&#x50CF;&#xFF1A;</p>
+<pre><code>In [48]: stamp = ts.index[2]
+
+In [49]: ts[stamp]
+Out[49]: -0.51943871505673811
+</code></pre><p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x66F4;&#x4E3A;&#x65B9;&#x4FBF;&#x7684;&#x7528;&#x6CD5;&#xFF1A;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x88AB;&#x89E3;&#x91CA;&#x4E3A;&#x65E5;&#x671F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>In [50]: ts[&apos;1/10/2011&apos;]
+Out[50]: 1.9657805725027142
+
+In [51]: ts[&apos;20110110&apos;]
+Out[51]: 1.9657805725027142
+</code></pre><h1 id="3-&#x65E5;&#x671F;&#x7684;&#x8303;&#x56F4;&#x3001;&#x9891;&#x7387;&#x4EE5;&#x53CA;&#x79FB;&#x52A8;">3. &#x65E5;&#x671F;&#x7684;&#x8303;&#x56F4;&#x3001;&#x9891;&#x7387;&#x4EE5;&#x53CA;&#x79FB;&#x52A8;</h1>
+<p>pandas&#x4E2D;&#x7684;&#x539F;&#x751F;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x4E00;&#x822C;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E0D;&#x89C4;&#x5219;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4EEC;&#x6CA1;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x9891;&#x7387;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x90E8;&#x5206;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x800C;&#x8A00;&#xFF0C;&#x8FD9;&#x662F;&#x65E0;&#x6240;&#x8C13;&#x7684;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5B83;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x4EE5;&#x67D0;&#x79CD;&#x76F8;&#x5BF9;&#x56FA;&#x5B9A;&#x7684;&#x9891;&#x7387;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x6BD4;&#x5982;&#x6BCF;&#x65E5;&#x3001;&#x6BCF;&#x6708;&#x3001;&#x6BCF;15&#x5206;&#x949F;&#x7B49;&#xFF08;&#x8FD9;&#x6837;&#x81EA;&#x7136;&#x4F1A;&#x5728;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x4E2D;&#x5F15;&#x5165;&#x7F3A;&#x5931;&#x503C;&#xFF09;&#x3002;&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;pandas&#x6709;&#x4E00;&#x6574;&#x5957;&#x6807;&#x51C6;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x9891;&#x7387;&#x4EE5;&#x53CA;&#x7528;&#x4E8E;&#x91CD;&#x91C7;&#x6837;&#x3001;&#x9891;&#x7387;&#x63A8;&#x65AD;&#x3001;&#x751F;&#x6210;&#x56FA;&#x5B9A;&#x9891;&#x7387;&#x65E5;&#x671F;&#x8303;&#x56F4;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4E4B;&#x524D;&#x90A3;&#x4E2A;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x56FA;&#x5B9A;&#x9891;&#x7387;&#xFF08;&#x6BCF;&#x65E5;&#xFF09;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#xFF0C;&#x53EA;&#x9700;&#x8C03;&#x7528;resample&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">72</span>]: ts
+Out[<span class="hljs-number">72</span>]: 
+<span class="hljs-number">2011</span><span class="hljs-number">-01</span><span class="hljs-number">-02</span>   <span class="hljs-number">-0.204708</span>
+<span class="hljs-number">2011</span><span class="hljs-number">-01</span><span class="hljs-number">-05</span>    <span class="hljs-number">0.478943</span>
+<span class="hljs-number">2011</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span>   <span class="hljs-number">-0.519439</span>
+<span class="hljs-number">2011</span><span class="hljs-number">-01</span><span class="hljs-number">-08</span>   <span class="hljs-number">-0.555730</span>
+<span class="hljs-number">2011</span><span class="hljs-number">-01</span><span class="hljs-number">-10</span>    <span class="hljs-number">1.965781</span>
+<span class="hljs-number">2011</span><span class="hljs-number">-01</span><span class="hljs-number">-12</span>    <span class="hljs-number">1.393406</span>
+dtype: float64
+
+In [<span class="hljs-number">73</span>]: resampler = ts.resample(<span class="hljs-string">&apos;D&apos;</span>)
+</code></pre>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x201C;D&#x201D;&#x662F;&#x6BCF;&#x5929;&#x7684;&#x610F;&#x601D;&#x3002;</p>
+<p>&#x9891;&#x7387;&#x7684;&#x8F6C;&#x6362;&#xFF08;&#x6216;&#x91CD;&#x91C7;&#x6837;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x4E3B;&#x9898;&#x3002;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x5C06;&#x544A;&#x8BC9;&#x4F60;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x57FA;&#x672C;&#x7684;&#x9891;&#x7387;&#x548C;&#x5B83;&#x7684;&#x500D;&#x6570;&#x3002;</p>
+<h3 id="3-&#x751F;&#x6210;&#x65E5;&#x671F;&#x8303;&#x56F4;">3. &#x751F;&#x6210;&#x65E5;&#x671F;&#x8303;&#x56F4;</h3>
+<p>&#x867D;&#x7136;&#x6211;&#x4E4B;&#x524D;&#x7528;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x660E;&#x8BF4;&#xFF0C;&#x4F46;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x731C;&#x5230;pandas.date_range&#x53EF;&#x7528;&#x4E8E;&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x9891;&#x7387;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;DatetimeIndex&#xFF1A;</p>
+<pre><code>In [74]: index = pd.date_range(&apos;2012-04-01&apos;, &apos;2012-06-01&apos;)
+
+In [75]: index
+Out[75]: 
+DatetimeIndex([&apos;2012-04-01&apos;, &apos;2012-04-02&apos;, &apos;2012-04-03&apos;, &apos;2012-04-04&apos;,
+               &apos;2012-04-05&apos;, &apos;2012-04-06&apos;, &apos;2012-04-07&apos;, &apos;2012-04-08&apos;,
+               &apos;2012-04-09&apos;, &apos;2012-04-10&apos;, &apos;2012-04-11&apos;, &apos;2012-04-12&apos;,
+               &apos;2012-04-13&apos;, &apos;2012-04-14&apos;, &apos;2012-04-15&apos;, &apos;2012-04-16&apos;,
+               &apos;2012-04-17&apos;, &apos;2012-04-18&apos;, &apos;2012-04-19&apos;, &apos;2012-04-20&apos;,
+               &apos;2012-04-21&apos;, &apos;2012-04-22&apos;, &apos;2012-04-23&apos;, &apos;2012-04-24&apos;,
+               &apos;2012-04-25&apos;, &apos;2012-04-26&apos;, &apos;2012-04-27&apos;, &apos;2012-04-28&apos;,
+               &apos;2012-04-29&apos;, &apos;2012-04-30&apos;, &apos;2012-05-01&apos;, &apos;2012-05-02&apos;,
+               &apos;2012-05-03&apos;, &apos;2012-05-04&apos;, &apos;2012-05-05&apos;, &apos;2012-05-06&apos;,
+               &apos;2012-05-07&apos;, &apos;2012-05-08&apos;, &apos;2012-05-09&apos;, &apos;2012-05-10&apos;,
+               &apos;2012-05-11&apos;, &apos;2012-05-12&apos;, &apos;2012-05-13&apos;, &apos;2012-05-14&apos;,
+               &apos;2012-05-15&apos;, &apos;2012-05-16&apos;, &apos;2012-05-17&apos;, &apos;2012-05-18&apos;,
+               &apos;2012-05-19&apos;, &apos;2012-05-20&apos;, &apos;2012-05-21&apos;, &apos;2012-05-22&apos;,
+               &apos;2012-05-23&apos;, &apos;2012-05-24&apos;, &apos;2012-05-25&apos;, &apos;2012-05-26&apos;,
+               &apos;2012-05-27&apos;, &apos;2012-05-28&apos;, &apos;2012-05-29&apos;, &apos;2012-05-30&apos;,
+               &apos;2012-05-31&apos;, &apos;2012-06-01&apos;],
+              dtype=&apos;datetime64[ns]&apos;, freq=&apos;D&apos;)
+</code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;date_range&#x4F1A;&#x4EA7;&#x751F;&#x6309;&#x5929;&#x8BA1;&#x7B97;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#x3002;&#x5982;&#x679C;&#x53EA;&#x4F20;&#x5165;&#x8D77;&#x59CB;&#x6216;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#xFF0C;&#x90A3;&#x5C31;&#x8FD8;&#x5F97;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x6570;&#x5B57;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">76</span>]: pd.date_range(start=<span class="hljs-string">&apos;2012-04-01&apos;</span>, periods=<span class="hljs-number">20</span>)
+Out[<span class="hljs-number">76</span>]: 
+DatetimeIndex([<span class="hljs-string">&apos;2012-04-01&apos;</span>, <span class="hljs-string">&apos;2012-04-02&apos;</span>, <span class="hljs-string">&apos;2012-04-03&apos;</span>, <span class="hljs-string">&apos;2012-04-04&apos;</span>,
+               <span class="hljs-string">&apos;2012-04-05&apos;</span>, <span class="hljs-string">&apos;2012-04-06&apos;</span>, <span class="hljs-string">&apos;2012-04-07&apos;</span>, <span class="hljs-string">&apos;2012-04-08&apos;</span>,
+               <span class="hljs-string">&apos;2012-04-09&apos;</span>, <span class="hljs-string">&apos;2012-04-10&apos;</span>, <span class="hljs-string">&apos;2012-04-11&apos;</span>, <span class="hljs-string">&apos;2012-04-12&apos;</span>,
+               <span class="hljs-string">&apos;2012-04-13&apos;</span>, <span class="hljs-string">&apos;2012-04-14&apos;</span>, <span class="hljs-string">&apos;2012-04-15&apos;</span>, <span class="hljs-string">&apos;2012-04-16&apos;</span>,
+               <span class="hljs-string">&apos;2012-04-17&apos;</span>, <span class="hljs-string">&apos;2012-04-18&apos;</span>, <span class="hljs-string">&apos;2012-04-19&apos;</span>, <span class="hljs-string">&apos;2012-04-20&apos;</span>],
+              dtype=<span class="hljs-string">&apos;datetime64[ns]&apos;</span>, freq=<span class="hljs-string">&apos;D&apos;</span>)
+
+In [<span class="hljs-number">77</span>]: pd.date_range(end=<span class="hljs-string">&apos;2012-06-01&apos;</span>, periods=<span class="hljs-number">20</span>)
+Out[<span class="hljs-number">77</span>]: 
+DatetimeIndex([<span class="hljs-string">&apos;2012-05-13&apos;</span>, <span class="hljs-string">&apos;2012-05-14&apos;</span>, <span class="hljs-string">&apos;2012-05-15&apos;</span>, <span class="hljs-string">&apos;2012-05-16&apos;</span>,
+               <span class="hljs-string">&apos;2012-05-17&apos;</span>, <span class="hljs-string">&apos;2012-05-18&apos;</span>, <span class="hljs-string">&apos;2012-05-19&apos;</span>, <span class="hljs-string">&apos;2012-05-20&apos;</span>,
+               <span class="hljs-string">&apos;2012-05-21&apos;</span>, <span class="hljs-string">&apos;2012-05-22&apos;</span>, <span class="hljs-string">&apos;2012-05-23&apos;</span>, <span class="hljs-string">&apos;2012-05-24&apos;</span>,
+               <span class="hljs-string">&apos;2012-05-25&apos;</span>, <span class="hljs-string">&apos;2012-05-26&apos;</span>, <span class="hljs-string">&apos;2012-05-27&apos;</span>,<span class="hljs-string">&apos;2012-05-28&apos;</span>,
+               <span class="hljs-string">&apos;2012-05-29&apos;</span>, <span class="hljs-string">&apos;2012-05-30&apos;</span>, <span class="hljs-string">&apos;2012-05-31&apos;</span>, <span class="hljs-string">&apos;2012-06-01&apos;</span>],
+              dtype=<span class="hljs-string">&apos;datetime64[ns]&apos;</span>, freq=<span class="hljs-string">&apos;D&apos;</span>)
+</code></pre>
+<p>&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x65E5;&#x671F;&#x5B9A;&#x4E49;&#x4E86;&#x65E5;&#x671F;&#x7D22;&#x5F15;&#x7684;&#x4E25;&#x683C;&#x8FB9;&#x754C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x7531;&#x6BCF;&#x6708;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x65E5;&#x7EC4;&#x6210;&#x7684;&#x65E5;&#x671F;&#x7D22;&#x5F15;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&quot;BM&quot;&#x9891;&#x7387;&#xFF08;&#x8868;&#x793A;business end of month&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EA;&#x4F1A;&#x5305;&#x542B;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5185;&#xFF08;&#x6216;&#x521A;&#x597D;&#x5728;&#x8FB9;&#x754C;&#x4E0A;&#x7684;&#xFF09;&#x7B26;&#x5408;&#x9891;&#x7387;&#x8981;&#x6C42;&#x7684;&#x65E5;&#x671F;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">78</span>]: pd.date_range(<span class="hljs-string">&apos;2000-01-01&apos;</span>, <span class="hljs-string">&apos;2000-12-01&apos;</span>, freq=<span class="hljs-string">&apos;BM&apos;</span>)
+Out[<span class="hljs-number">78</span>]: 
+DatetimeIndex([<span class="hljs-string">&apos;2000-01-31&apos;</span>, <span class="hljs-string">&apos;2000-02-29&apos;</span>, <span class="hljs-string">&apos;2000-03-31&apos;</span>, <span class="hljs-string">&apos;2000-04-28&apos;</span>,
+               <span class="hljs-string">&apos;2000-05-31&apos;</span>, <span class="hljs-string">&apos;2000-06-30&apos;</span>, <span class="hljs-string">&apos;2000-07-31&apos;</span>, <span class="hljs-string">&apos;2000-08-31&apos;</span>,
+               <span class="hljs-string">&apos;2000-09-29&apos;</span>, <span class="hljs-string">&apos;2000-10-31&apos;</span>, <span class="hljs-string">&apos;2000-11-30&apos;</span>],
+              dtype=<span class="hljs-string">&apos;datetime64[ns]&apos;</span>, freq=<span class="hljs-string">&apos;BM&apos;</span>)
+</code></pre>
+<p><img src="../assets/103.png" alt=""></p>
+<h3 id="4-&#x91CD;&#x91C7;&#x6837;&#x53CA;&#x9891;&#x7387;&#x8F6C;&#x6362;">4. &#x91CD;&#x91C7;&#x6837;&#x53CA;&#x9891;&#x7387;&#x8F6C;&#x6362;</h3>
+<p>&#x91CD;&#x91C7;&#x6837;&#xFF08;resampling&#xFF09;&#x6307;&#x7684;&#x662F;&#x5C06;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x4ECE;&#x4E00;&#x4E2A;&#x9891;&#x7387;&#x8F6C;&#x6362;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x9891;&#x7387;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x3002;&#x5C06;&#x9AD8;&#x9891;&#x7387;&#x6570;&#x636E;&#x805A;&#x5408;&#x5230;&#x4F4E;&#x9891;&#x7387;&#x79F0;&#x4E3A;&#x964D;&#x91C7;&#x6837;&#xFF08;downsampling&#xFF09;&#xFF0C;&#x800C;&#x5C06;&#x4F4E;&#x9891;&#x7387;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x5230;&#x9AD8;&#x9891;&#x7387;&#x5219;&#x79F0;&#x4E3A;&#x5347;&#x91C7;&#x6837;&#xFF08;upsampling&#xFF09;&#x3002;&#x5E76;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x91CD;&#x91C7;&#x6837;&#x90FD;&#x80FD;&#x88AB;&#x5212;&#x5206;&#x5230;&#x8FD9;&#x4E24;&#x4E2A;&#x5927;&#x7C7B;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5C06;W-WED&#xFF08;&#x6BCF;&#x5468;&#x4E09;&#xFF09;&#x8F6C;&#x6362;&#x4E3A;W-FRI&#x65E2;&#x4E0D;&#x662F;&#x964D;&#x91C7;&#x6837;&#x4E5F;&#x4E0D;&#x662F;&#x5347;&#x91C7;&#x6837;&#x3002;</p>
+<p>pandas&#x5BF9;&#x8C61;&#x90FD;&#x5E26;&#x6709;&#x4E00;&#x4E2A;resample&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x662F;&#x5404;&#x79CD;&#x9891;&#x7387;&#x8F6C;&#x6362;&#x5DE5;&#x4F5C;&#x7684;&#x4E3B;&#x529B;&#x51FD;&#x6570;&#x3002;resample&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x4E8E;groupby&#x7684;API&#xFF0C;&#x8C03;&#x7528;resample&#x53EF;&#x4EE5;&#x5206;&#x7EC4;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x805A;&#x5408;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-python">In [<span class="hljs-number">208</span>]: rng = pd.date_range(<span class="hljs-string">&apos;2000-01-01&apos;</span>, periods=<span class="hljs-number">100</span>, freq=<span class="hljs-string">&apos;D&apos;</span>)
+
+In [<span class="hljs-number">209</span>]: ts = pd.Series(np.random.randn(len(rng)), index=rng)
+
+In [<span class="hljs-number">210</span>]: ts
+Out[<span class="hljs-number">210</span>]: 
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-01</span>    <span class="hljs-number">0.631634</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-02</span>   <span class="hljs-number">-1.594313</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-03</span>   <span class="hljs-number">-1.519937</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-04</span>    <span class="hljs-number">1.108752</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-05</span>    <span class="hljs-number">1.255853</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-06</span>   <span class="hljs-number">-0.024330</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-07</span>   <span class="hljs-number">-2.047939</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-08</span>   <span class="hljs-number">-0.272657</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-09</span>   <span class="hljs-number">-1.692615</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-10</span>    <span class="hljs-number">1.423830</span>
+                ...   
+<span class="hljs-number">2000</span><span class="hljs-number">-03</span><span class="hljs-number">-31</span>   <span class="hljs-number">-0.007852</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-01</span>   <span class="hljs-number">-1.638806</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-02</span>    <span class="hljs-number">1.401227</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-03</span>    <span class="hljs-number">1.758539</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-04</span>    <span class="hljs-number">0.628932</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-05</span>   <span class="hljs-number">-0.423776</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-06</span>    <span class="hljs-number">0.789740</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-07</span>    <span class="hljs-number">0.937568</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-08</span>   <span class="hljs-number">-2.253294</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-09</span>   <span class="hljs-number">-1.772919</span>
+Freq: D, Length: <span class="hljs-number">100</span>, dtype: float64
+
+In [<span class="hljs-number">211</span>]: ts.resample(<span class="hljs-string">&apos;M&apos;</span>).mean()
+Out[<span class="hljs-number">211</span>]: 
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span><span class="hljs-number">-31</span>   <span class="hljs-number">-0.165893</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-02</span><span class="hljs-number">-29</span>    <span class="hljs-number">0.078606</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-03</span><span class="hljs-number">-31</span>    <span class="hljs-number">0.223811</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span><span class="hljs-number">-30</span>   <span class="hljs-number">-0.063643</span>
+Freq: M, dtype: float64
+
+In [<span class="hljs-number">212</span>]: ts.resample(<span class="hljs-string">&apos;M&apos;</span>, kind=<span class="hljs-string">&apos;period&apos;</span>).mean()
+Out[<span class="hljs-number">212</span>]: 
+<span class="hljs-number">2000</span><span class="hljs-number">-01</span>   <span class="hljs-number">-0.165893</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-02</span>    <span class="hljs-number">0.078606</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-03</span>    <span class="hljs-number">0.223811</span>
+<span class="hljs-number">2000</span><span class="hljs-number">-04</span>   <span class="hljs-number">-0.063643</span>
+Freq: M, dtype: float64
+</code></pre>
+<p>resample&#x662F;&#x4E00;&#x4E2A;&#x7075;&#x6D3B;&#x9AD8;&#x6548;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x975E;&#x5E38;&#x5927;&#x7684;&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x3002;</p>
+<p><img src="../assets/105.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="09聚合和分组.html" class="navigation navigation-prev " aria-label="Previous page: 第9节：聚合和分组">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter4/00.html" class="navigation navigation-next " aria-label="Next page: 第四章：Matploblib库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第10节：时间序列","level":"1.4.10","depth":2,"next":{"title":"第四章：Matploblib库","level":"1.5","depth":1,"path":"chapter4/00.md","ref":"chapter4/00.md","articles":[{"title":"第1节：常用图","level":"1.5.1","depth":2,"path":"chapter4/01常用图.md","ref":"chapter4/01常用图.md","articles":[]},{"title":"第2节：基本使用","level":"1.5.2","depth":2,"path":"chapter4/02基本使用.md","ref":"chapter4/02基本使用.md","articles":[]},{"title":"第3节：条形图","level":"1.5.3","depth":2,"path":"chapter4/03条形图.md","ref":"chapter4/03条形图.md","articles":[]},{"title":"第4节：直方图","level":"1.5.4","depth":2,"path":"chapter4/04直方图.md","ref":"chapter4/04直方图.md","articles":[]},{"title":"第5节：散点图","level":"1.5.5","depth":2,"path":"chapter4/05散点图.md","ref":"chapter4/05散点图.md","articles":[]},{"title":"第6节：饼图","level":"1.5.6","depth":2,"path":"chapter4/06饼图.md","ref":"chapter4/06饼图.md","articles":[]},{"title":"第7节：箱线图","level":"1.5.7","depth":2,"path":"chapter4/07箱线图.md","ref":"chapter4/07箱线图.md","articles":[]},{"title":"第8节：雷达图","level":"1.5.8","depth":2,"path":"chapter4/08雷达图.md","ref":"chapter4/08雷达图.md","articles":[]},{"title":"第9节：matplotlib绘图分析","level":"1.5.9","depth":2,"path":"chapter4/09matplotlib绘图分析.md","ref":"chapter4/09matplotlib绘图分析.md","articles":[]},{"title":"第10节：多图布局","level":"1.5.10","depth":2,"path":"chapter4/10多图布局.md","ref":"chapter4/10多图布局.md","articles":[]},{"title":"第11节：matplotlib配置","level":"1.5.11","depth":2,"path":"chapter4/11matplotlib配置.md","ref":"chapter4/11matplotlib配置.md","articles":[]},{"title":"第12节：matplotlib作业","level":"1.5.12","depth":2,"path":"chapter4/12matplotlib作业.md","ref":"chapter4/12matplotlib作业.md","articles":[]}]},"previous":{"title":"第9节：聚合和分组","level":"1.4.9","depth":2,"path":"chapter2/09聚合和分组.md","ref":"chapter2/09聚合和分组.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/10时间序列.md","mtime":"2019-03-30T04:32:30.240Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-16T03:09:20.760Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

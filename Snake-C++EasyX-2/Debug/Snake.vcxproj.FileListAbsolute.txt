@@ -1,0 +1,5 @@
+D:\NNUCS\MyProjects\Snake\Debug\Snake.exe
+C:\Users\123\Desktop\19200213-Snake-VS\Debug\Snake.exe
+C:\Users\123\Desktop\19200213-Snake-C++EasyX\Debug\Snake.exe
+C:\Users\123\Desktop\19200213-Snake-C++EasyX-2\Debug\Snake.exe
+C:\Users\123\Desktop\课程设计\19200213-Snake-C++EasyX-2\Debug\Snake.exe

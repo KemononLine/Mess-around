@@ -1,0 +1,1 @@
+Snake-Release文件是桌面版的贪吃蛇应用程序，解压后直接运行snake.exe即可
